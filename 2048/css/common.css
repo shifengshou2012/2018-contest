@@ -1,0 +1,41 @@
+div{
+    box-sizing: border-box;
+}
+.container{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-image: 
+        linear-gradient(0deg,  #bbada0 6% ,transparent 6%, transparent 94%, #bbada0 94%),
+        linear-gradient(90deg, #bbada0 6% ,#cdc0b4 6%, #cdc0b4 94%, #bbada0 94%)
+        ;
+    background-size: 150px 150px;
+    position: relative;
+    box-sizing: content-box;
+    border: 6px solid #bbada0;
+    border-radius: 15px;
+    z-index: 0;
+}
+.chessman{
+    width: calc(25% - 18px);
+    height: calc(25% - 18px);
+    background-color:lightblue;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 130px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.chessman::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: #bbada0;
+    z-index: 1;
+}
